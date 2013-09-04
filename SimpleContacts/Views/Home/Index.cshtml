@@ -1,0 +1,27 @@
+﻿@model SimpleContacts.Models.ListContactsViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                This project is using the default MVC4 layout, but demonstrates using Code First to create a database of contacts and pull them all the way up through interfaces, controllers, viewmodels, all the way to the view you're currently looking at!
+            </p>
+        </div>
+    </section>
+}
+<h3>Here are your contacts:</h3>
+<table class="table table-bordered table-striped">
+    @foreach (var contact in Model.Contacts)
+    {
+    <tr>
+        <td>@contact.Name</td>
+        <td>@contact.PhoneNumber</td>
+    </tr>    
+    }
+</table>
