@@ -33,6 +33,7 @@ namespace SimpleContacts.Data.Migrations
                 new Contact() { ContactId = 8, Name = "Diana Ross", PhoneNumber = "346.324.6432" },
                 new Contact() { ContactId = 9, Name = "Snoopy Dog", PhoneNumber = "948.326.7454" }
                 );
+
         }
     }
 }
